@@ -1,0 +1,196 @@
+/*importamos fuentes font google*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*definimos variables*/
+:root{
+    --color-primario: #17153B; /*#3B0084; /*#17153B; #131842;*/
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --fuente-monstserrat: 'Montserrat', sans-serif;
+    --fuente-krona: 'krona One', sans-serif;
+    --color-hover: #272727;
+}
+/* RESET */
+* {
+   padding: 0;
+   margin: 0; 
+}
+
+body{
+    /*height: 100vh; /* pagina ocupa 100% altura*/
+    /* */
+    box-sizing: border-box; /*mantiene las dimensiones de la caja */
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.header{
+    padding: 2% 0% 0% 15%; /* margin-top, right, botton, leth*******/
+}
+
+/*flexbox
+display:flex;
+flex-direction: 
+justify-content:space-between;*/
+.header__menu{
+    display: flex; /* alineacion horizontal*/
+    gap: 80px; /*espacio entre*/
+
+/* 
+1   rem = 16px
+1.5 rem = 24px
+2   rem = 32px  */
+}
+.header__menu__link{
+    font-family: var(--fuente-monstserrat);
+    font-size: 1.5rem;   /*24px;*/
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.presentacion{
+    /*margin: 10% 15%; /*crea espacion afuera del elemento*/
+    padding: 4.5% 15%; /*crea espacion adentro del elemento******/
+    display: flex; /*ae alinea en linea*/
+    align-items: center; /*se alinea*/
+    justify-content: space-between;
+    gap: 82px; /*espacio entre la imagen y el texto*****/
+
+    /*gap: 50px; /*espacio entre*/
+}
+.presentacion-about{
+    /*margin: 10% 15%; /*crea espacion afuera del elemento*/
+    padding: 8.5% 15%; /*crea espacion adentro del elemento******/
+    display: flex; /*ae alinea en linea*/
+    align-items: center; /*se alinea*/
+    justify-content: space-between;
+    gap: 82px; /*espacio entre la imagen y el texto*****/
+
+
+    /*gap: 50px; /*espacio entre*/
+}
+
+.presentacion__contenido{
+    /*width: 615px; /* espacio se cambia por 50% */
+    width: 50%; /*sea responsivo*/
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* espacio entre los contenidos*/
+
+}
+.presentacion__contenido__titulo{ /* h1*/
+    font-family: var(--fuente-krona);
+    font-size: 2.25 rem; /*36px;*/
+}
+
+.titulo-destaque{
+    color: var(--color-terciario) ;
+}
+
+.presentacion__contenido__texto{ /*p*/
+    font-family: var(--fuente-monstserrat);
+    font-size: 1.5rem; /*24px;*/
+}
+
+.presentacion__enlaces{
+    display: flex;/**/
+    flex-direction: column; /*eje botones vertical*/
+    /*flex-direction: row;/*eje botones horizontales*/
+    justify-content: space-between; /*espacio entre dos elementos*/
+    align-items: center; /*centrar botones*/
+    gap: 32px; /*espacio entre botones vertical*/
+}
+
+.presentacion__enlaces__subtitulo{
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem; /*24px;*/
+    font-weight: 400;
+}
+/* */
+
+.presentacion__enlaces__link{ /* estilizar los botones*/
+    /*width: 378px; /* anchura boton*/
+    /* */
+    width: 50%; /* para que se responsivo*/
+    text-align: center; /* alinear al centro*/
+    border-radius: 8px; /*border botones*/
+    font-size: 1.5rem; /*24px;*/
+    font-weight: 600; /*semibold*/
+    padding: 21.5px 0;/*alt + mouse*/
+    text-decoration: none;
+    color: var(--color-secundario); /* color letras botones*/
+    font-family: var(--fuente-monstserrat);
+    border: 2px solid var(--color-terciario); /*tamaño del borde, estilo borde, color*/
+    display: flex; /* alinea iconos horizontal con texto int*/
+    justify-content: center; /*centra iconos y textos*/
+    gap: 10px; /*espacion entre caja icono*/
+    
+}
+.presentacion__enlaces__link:hover{
+    background-color: var(--color-hover);
+}
+
+.presentacion__imagen{ /*la imagen siempre ocupe 50% d ela pantalla*/
+    width: 50%;
+
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px; /*espacio arriba y abajo*/
+    color: var(--color-primario); /*letra*/
+    text-align: center; /*alineamos al centro*/
+    font-family: var(--fuente-monstserrat);
+    font-size: 1.5rem; /*24px;*/
+    font-weight: 400;/*regular*/
+
+}
+/* */
+@media(max-width: 1200px){
+
+    .header{ /* espacio superior*/
+        padding: 10%;
+    }
+
+    .header__menu{
+        /*como en la clase header ya esta display-flex*/
+        justify-content: center;
+       
+    }
+    .presentacion, .presentacion-about{
+        flex-direction: column-reverse;
+        padding: 5%;/*mejoramos el padding*/
+
+    }
+    /*mejoramos width con auto*/
+    .presentacion__contenido{
+        width: auto;
+        /*width: 100%;*/
+    }
+}
+/*Escritorio extra grande ok
+@media only screen and (min-width: 1201px){
+}
+
+/* Escritorio grande ok
+@media only screen and (min-width: 1025px) and (max-width: 1200px){
+o asi: @media only screen and (min-width: 992px){
+}
+*/
+
+/* Escritorio pequeño / LAPTOPS ok
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+o asi: @media only screen and (min-width: 768px){
+}*/
+
+/* Tablets y phablets 
+@media only screen and (min-width: 481px) and (max-width: 768px){
+o asi: @media only screen and (max-width: 600px){
+}*/
+
+/* Teléfonos ok
+@media only screen and (min-width: 320px) and(max-width: 480px){
+o asi: @media only screen and (max-width: 600px){
+}*/

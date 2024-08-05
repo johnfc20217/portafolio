@@ -1,0 +1,9 @@
+https://www.figma.com/design/D464FfN417KSWJHIUVpMnX/Portafolio---Curso?node-id=0-1&t=LMA18hSWJVPcfdqy-0
+https://www.figma.com/design/EAQgNcBE5qOCn5qFFYZzNZ/Portafolio---Curso-3?node-id=0-1&t=K6TP6xNvZDsyIwqZ-0
+
+
+creamos el proyecto en github
+lo dejamos asi
+en la carpeta del proyecto del computador donde lo alojamos 
+abrimos gitbash
+git init //inicializamos el proyecto
